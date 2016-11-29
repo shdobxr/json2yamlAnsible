@@ -17,14 +17,14 @@ replacements = {
     'PrefixListIds: []': '',
     '- Description:': '        description:',
     '  GroupName:': '    - name:',
-    '  -     IpProtocol:': '          - proto:',
+    '    IpProtocol:': '          - proto:',
     '- Description:': '        description:',
     'SecurityGroups:': '- name:',
     '  IpPermissions:': '        rules:',
     '  IpPermissionsEgress:': '        rules_egress:',
     '  GroupId:': '',
     '    - GroupId:': '            group_id:',
-
+    '    IpRanges:': None, 
     '~~~NO_SUCH_KEY~~~': None  # Empty remove pattern would match every line.
 }
 replacements = dict((re.escape(k), v) for k, v in replacements.iteritems())
